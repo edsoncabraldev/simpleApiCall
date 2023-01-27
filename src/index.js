@@ -13,6 +13,7 @@ const rootReducer = combineReducers({ myFirstReducer });
 const store = createStore(rootReducer, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(mySaga);
 
+console.log(store);
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
